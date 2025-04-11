@@ -1,4 +1,4 @@
-📢 Reclamation Management System  
+# 📢 Microservice Réclamations – by Ines Ketata
 Application Fullstack pour la gestion des réclamations clients, développée avec Spring Boot (Microservices) et Angular.
 
 📁 Structure du projet  
