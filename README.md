@@ -63,135 +63,76 @@ The `Shipment` entity represents a shipment, from creation to delivery. It track
   The estimated delivery date.
 
 
-Warehouse Entity
-The Warehouse entity represents a warehouse that stores products. It tracks essential details like capacity, current inventory, and location.
+## 🏢 Warehouse Entity
 
-Fields:
-id (Long):
-The unique identifier for the warehouse (auto-generated).
+The `Warehouse` entity represents a warehouse that stores products. It tracks essential details like **capacity**, **current inventory**, and **location**.
 
-name (String):
-The name of the warehouse (required).
+### 📋 Fields
 
-location (String):
-The location (address) of the warehouse.
+- **`id`** (`Long`)  
+  The unique identifier for the warehouse (auto-generated).
 
-capacity (Integer):
-The storage capacity of the warehouse (number of units it can store).
+- **`name`** (`String`)  
+  The name of the warehouse (required).
 
-currentInventory (Integer):
-The current number of items stored in the warehouse.
+- **`location`** (`String`)  
+  The address or location of the warehouse.
 
-createdAt (LocalDateTime):
-The creation date and time of the warehouse record.
+- **`capacity`** (`Integer`)  
+  The maximum number of units the warehouse can store.
 
-Example Usage:
+- **`currentInventory`** (`Integer`)  
+  The number of units currently stored in the warehouse.
 
-Warehouse warehouse = new Warehouse(
-    "Main Warehouse",            // Warehouse Name
-    "456 Commerce Rd, Springfield, IL",  // Location
-    10000,                       // Capacity
-    5000                         // Current Inventory
-);
+- **`createdAt`** (`LocalDateTime`)  
+  The timestamp when the warehouse was created.
+  
 
-API Endpoints for Shipment and Warehouse
-Shipment Controller
-GET /api/shipments - Retrieve all shipments
+📡 API Endpoints for Shipment and Warehouse
+🚚 Shipment Controller
+GET /api/shipments – Retrieve all shipments
 
-POST /api/shipments - Create a new shipment
+POST /api/shipments – Create a new shipment
 
-GET /api/shipments/{id} - Retrieve a shipment by ID
+GET /api/shipments/{id} – Retrieve a shipment by ID
 
-PUT /api/shipments/{id} - Update a shipment by ID
+PUT /api/shipments/{id} – Update a shipment by ID
 
-DELETE /api/shipments/{id} - Delete a shipment by ID
+DELETE /api/shipments/{id} – Delete a shipment by ID
 
-Warehouse Controller
-GET /api/warehouses - Retrieve all warehouses
+🏬 Warehouse Controller
+GET /api/warehouses – Retrieve all warehouses
 
-POST /api/warehouses - Create a new warehouse
+POST /api/warehouses – Create a new warehouse
 
-GET /api/warehouses/{id} - Retrieve a warehouse by ID
+GET /api/warehouses/{id} – Retrieve a warehouse by ID
 
-PUT /api/warehouses/{id} - Update a warehouse by ID
+PUT /api/warehouses/{id} – Update a warehouse by ID
 
-DELETE /api/warehouses/{id} - Delete a warehouse by ID
+DELETE /api/warehouses/{id} – Delete a warehouse by ID
 
 🎨 User Interface
 Angular Features:
-Shipment Tracking: Users can track shipments by tracking number.
+📦 Shipment Tracking:
+Users can track shipments using their tracking numbers.
 
-Warehouse Management: Administrators can manage warehouse details and inventory.
+🏭 Warehouse Management:
+Admins can manage warehouse details and update inventory.
 
-Real-time Shipment Status: Get live updates on the status of shipments.
-
-🖥️ Running the Project
-Backend
-bash
-Copy
-Edit
-cd backend/logistics-service/
-# Launch the service:
-./mvnw spring-boot:run
-Frontend
-bash
-Copy
-Edit
-cd frontend/ecommerce-app/
-npm install
-ng serve --open
-The Angular UI will be available at: http://localhost:4200
-
-🔗 Example Endpoints
-Shipment
-GET /api/shipments - Retrieve all shipments
-
-POST /api/shipments - Create a new shipment
-
-GET /api/shipments/{id} - Retrieve a shipment by ID
-
-PUT /api/shipments/{id} - Update a shipment
-
-DELETE /api/shipments/{id} - Delete a shipment
-
-Warehouse
-GET /api/warehouses - Retrieve all warehouses
-
-POST /api/warehouses - Create a new warehouse
-
-GET /api/warehouses/{id} - Retrieve a warehouse by ID
-
-PUT /api/warehouses/{id} - Update a warehouse
-
-DELETE /api/warehouses/{id} - Delete a warehouse
+📈 Real-time Shipment Status:
+Live updates on shipment status and location.
 
 🎯 Roadmap
- Authentication with JWT or Keycloak
+✅ Authentication with JWT or Keycloak
 
- Admin Panel for managing shipments and warehouses
+✅ Admin panel for managing shipments and warehouses
 
- Inventory Management for real-time updates on stock levels
+✅ Inventory management with real-time stock updates
 
- Notification system for shipment updates
+✅ Notification system for shipment updates
 
-🛠️ Contribution
-Fork the project.
-
-Create a branch for your feature (git checkout -b feature/my-feature).
-
-Commit your changes (git commit -m 'Added feature').
-
-Push your branch (git push origin feature/my-feature).
-
-Open a pull request to discuss your changes.
 
 📝 License
-Project under the MIT license. Free and open-source use.
+This project is licensed under the MIT License — free for personal and commercial use.
 
-🔗 Useful Links
-Spring Boot Official Documentation
-
-Angular Official Documentation
-
-GitHub Repository
 
