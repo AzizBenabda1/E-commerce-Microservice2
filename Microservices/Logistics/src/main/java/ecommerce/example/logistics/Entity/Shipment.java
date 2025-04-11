@@ -10,10 +10,15 @@ import java.time.LocalDateTime;
 @Setter
 @Getter
 @Entity
+<<<<<<< HEAD
 
 public class Shipment {
 
 
+=======
+public class Shipment {
+
+>>>>>>> e20a847 (addition of another entity  on Fehd branch)
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -41,11 +46,22 @@ public class Shipment {
     @FutureOrPresent(message = "Estimated delivery date must be in the present or future")
     private LocalDateTime estimatedDeliveryDate;
 
+<<<<<<< HEAD
+=======
+    // 🔗 Many-to-One relationship with Warehouse
+    @ManyToOne
+    @JoinColumn(name = "warehouse_id")
+    private Warehouse warehouse;
+
+>>>>>>> e20a847 (addition of another entity  on Fehd branch)
     public Shipment() {
         this.shipmentDate = LocalDateTime.now();
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> e20a847 (addition of another entity  on Fehd branch)
     public Shipment(String trackingNumber, String carrier, String status, String destination, LocalDateTime estimatedDeliveryDate) {
         this.trackingNumber = trackingNumber;
         this.carrier = carrier;
@@ -65,6 +81,13 @@ public class Shipment {
                 ", destination='" + destination + '\'' +
                 ", shipmentDate=" + shipmentDate +
                 ", estimatedDeliveryDate=" + estimatedDeliveryDate +
+<<<<<<< HEAD
                 '}';
     }
 }
+=======
+                ", warehouse=" + (warehouse != null ? warehouse.getName() : "null") +
+                '}';
+    }
+}
+>>>>>>> e20a847 (addition of another entity  on Fehd branch)

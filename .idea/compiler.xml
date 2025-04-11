@@ -3,41 +3,17 @@
   <component name="CompilerConfiguration">
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true" />
-      <profile name="Maven default annotation processors profile" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <module name="Microservice-User" />
-        <module name="eureka" />
-        <module name="Notification-Microservice" />
-        <module name="fournisseur" />
-        <module name="Review" />
-        <module name="reclamation" />
-        <module name="Produit" />
-        <module name="Logistics" />
-      </profile>
-      <profile name="Annotation profile for CommandeService" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="false">
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
-        </processorPath>
-        <module name="CommandeService" />
-      </profile>
     </annotationProcessing>
-  </component>
-  <component name="JavacSettings">
-    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="CommandeService" options="-parameters" />
-      <module name="Logistics" options="-parameters" />
-      <module name="Microservice-User" options="-parameters" />
-      <module name="Notification-Microservice" options="-parameters" />
-      <module name="Produit" options="-parameters" />
-      <module name="Review" options="-parameters" />
-      <module name="eureka" options="-parameters" />
-      <module name="fournisseur" options="-parameters" />
-      <module name="reclamation" options="-parameters" />
-    </option>
+    <bytecodeTargetLevel>
+      <module name="CommandeService" target="17" />
+      <module name="eureka" target="17" />
+      <module name="fournisseur" target="17" />
+      <module name="Logistics" target="17" />
+      <module name="Microservice-User" target="17" />
+      <module name="Notification-Microservice" target="17" />
+      <module name="Produit" target="17" />
+      <module name="reclamation" target="17" />
+      <module name="Review" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>

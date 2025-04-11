@@ -14,7 +14,11 @@ public class ShipmentService {
 
     private final ShipmentRepository shipmentRepository;
 
+<<<<<<< HEAD
     // ✅ Injection par constructeur (bonne pratique)
+=======
+
+>>>>>>> e20a847 (addition of another entity  on Fehd branch)
     public ShipmentService(ShipmentRepository shipmentRepository) {
         this.shipmentRepository = shipmentRepository;
     }
@@ -40,12 +44,20 @@ public class ShipmentService {
                     shipment.setDestination(updatedShipment.getDestination());
                     shipment.setEstimatedDeliveryDate(updatedShipment.getEstimatedDeliveryDate());
                     return shipmentRepository.save(shipment);
+<<<<<<< HEAD
                 }).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Shipment with ID " + id + " not found")); // ✅ Exception gérée directement ici
+=======
+                }).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Shipment with ID " + id + " not found"));
+>>>>>>> e20a847 (addition of another entity  on Fehd branch)
     }
 
     public void deleteShipment(Long id) {
         if (!shipmentRepository.existsById(id)) {
+<<<<<<< HEAD
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Shipment with ID " + id + " not found"); // ✅ Exception inline
+=======
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Shipment with ID " + id + " not found");
+>>>>>>> e20a847 (addition of another entity  on Fehd branch)
         }
         shipmentRepository.deleteById(id);
     }
