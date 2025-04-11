@@ -62,15 +62,7 @@ The `Shipment` entity represents a shipment, from creation to delivery. It track
 - **`estimatedDeliveryDate`** (LocalDateTime):  
   The estimated delivery date.
 
-#### **Example Usage**:
-```java
-Shipment shipment = new Shipment(
-    "TRK12345678",          // Tracking Number
-    "FedEx",                // Carrier
-    "In Transit",           // Status
-    "123 Main St, Springfield, IL",  // Destination
-    LocalDateTime.now().plusDays(3)   // Estimated Delivery Date
-);
+
 Warehouse Entity
 The Warehouse entity represents a warehouse that stores products. It tracks essential details like capacity, current inventory, and location.
 
