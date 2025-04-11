@@ -174,10 +174,10 @@ For **code reviews**, please open a *pull request*, and a team member will valid
 
  -👤 **Développeur 1*Wassim Hajii* – Microservice Produit
 - 👤 **Développeur 2*Mouhamed Aziz Ben Abda* – Microservice Commande
-- 👤 **Développeur 3*Fehd ounis* – Microservice Review
-- 👤 **Développeur 4*Aziz Bouzidi* – Microservice Logistique
-- 👤 **Développeur 4*Ines Ketata* – Microservice Reclamation
-- 👤 **Développeur 4*Oussema ben ghazel =* – Microservice User
+- 👤 **Développeur 3*Fehd ounis* – Microservice Logistique
+- 👤 **Développeur 4*Aziz Bouzidi* – Microservice Review
+- 👤 **Développeur 5*Ines Ketata* – Microservice Reclamation
+- 👤 **Développeur 6*Oussema ben ghazel =* – Microservice User
 
 
 ---
