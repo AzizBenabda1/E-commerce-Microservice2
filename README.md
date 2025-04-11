@@ -6,7 +6,9 @@
 
 ## 🧱 General Project Structure
 
-ecommerce-platform/ ├── backend/ │ ├── logistics-service/ # Handles logistics, shipment tracking, and warehouse management ├── frontend/ └── ecommerce-app/ # Angular application (UI)
+ecommerce-platform/ ├── backend/ │ 
+└── logistics-service/ # Handles logistics, shipment tracking, and warehouse management 
+└── frontend/ └── ecommerce-app/ # Angular application (UI)
 
 
 ## ⚙️ Technologies Used
@@ -88,51 +90,75 @@ The `Warehouse` entity represents a warehouse that stores products. It tracks es
   The timestamp when the warehouse was created.
   
 
-📡 API Endpoints for Shipment and Warehouse
+🔗 API Endpoints
 🚚 Shipment Controller
-GET /api/shipments – Retrieve all shipments
-
-POST /api/shipments – Create a new shipment
-
-GET /api/shipments/{id} – Retrieve a shipment by ID
-
-PUT /api/shipments/{id} – Update a shipment by ID
-
-DELETE /api/shipments/{id} – Delete a shipment by ID
-
-🏬 Warehouse Controller
-GET /api/warehouses – Retrieve all warehouses
-
-POST /api/warehouses – Create a new warehouse
-
-GET /api/warehouses/{id} – Retrieve a warehouse by ID
-
-PUT /api/warehouses/{id} – Update a warehouse by ID
-
-DELETE /api/warehouses/{id} – Delete a warehouse by ID
-
+Method	Endpoint	Description
+GET	/api/shipments	Retrieve all shipments
+POST	/api/shipments	Create a new shipment
+GET	/api/shipments/{id}	Retrieve a shipment by ID
+PUT	/api/shipments/{id}	Update a shipment by ID
+DELETE	/api/shipments/{id}	Delete a shipment by ID
+🏢 Warehouse Controller
+Method	Endpoint	Description
+GET	/api/warehouses	Retrieve all warehouses
+POST	/api/warehouses	Create a new warehouse
+GET	/api/warehouses/{id}	Retrieve a warehouse by ID
+PUT	/api/warehouses/{id}	Update a warehouse by ID
+DELETE	/api/warehouses/{id}	Delete a warehouse by ID
 🎨 User Interface
 Angular Features:
-📦 Shipment Tracking:
-Users can track shipments using their tracking numbers.
 
-🏭 Warehouse Management:
-Admins can manage warehouse details and update inventory.
+Shipment Tracking: Users can track shipments using tracking numbers.
 
-📈 Real-time Shipment Status:
-Live updates on shipment status and location.
+Warehouse Management: Admins can create, update, and monitor warehouses.
+
+Real-time Shipment Status: Users can see updated statuses instantly.
+
+🖥️ Running the Project
+Backend
+
+cd backend/logistics-service/
+./mvnw spring-boot:run
+Frontend
+
+cd frontend/ecommerce-app/
+npm install
+ng serve --open
+Accessible via: http://localhost:4200
 
 🎯 Roadmap
-✅ Authentication with JWT or Keycloak
+ ✅ Authentication with JWT or Keycloak
 
-✅ Admin panel for managing shipments and warehouses
+ ✅ Admin Panel for managing shipments and warehouses
 
-✅ Inventory management with real-time stock updates
+ ✅ Inventory Management with live stock updates
 
-✅ Notification system for shipment updates
+ ✅ Notification system for shipment updates
 
+🛠️ Contribution
+Fork the project
+
+Create a feature branch:
+
+
+git checkout -b feature/my-feature
+Commit your changes:
+
+
+git commit -m 'Added feature'
+Push your branch:
+
+
+git push origin feature/my-feature
+Open a pull request and get it reviewed
 
 📝 License
-This project is licensed under the MIT License — free for personal and commercial use.
+Project licensed under the MIT License – free to use and modify.
 
+🔗 Useful Links
+Spring Boot Documentation
+
+Angular Documentation
+
+GitHub Repository
 
