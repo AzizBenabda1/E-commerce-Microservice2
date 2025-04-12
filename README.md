@@ -36,6 +36,7 @@ project-root/
 - Spring Data JPA
 - MySQL
 - Docker (optionnel)
+- Python
 
 ### 🌐 Frontend
 - Angular 17+
