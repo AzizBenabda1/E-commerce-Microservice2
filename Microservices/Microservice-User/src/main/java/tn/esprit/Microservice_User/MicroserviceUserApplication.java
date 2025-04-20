@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.scheduling.annotation.EnableAsync;
 import tn.esprit.Microservice_User.role.Role;
+import tn.esprit.Microservice_User.role.RoleName;
 import tn.esprit.Microservice_User.role.RoleRepository;
 
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
@@ -29,7 +30,7 @@ public class MicroserviceUserApplication {
 	@Bean
 	public CommandLineRunner runner(RoleRepository roleRepository) {
 		return args -> {
-			if (roleRepository.findByName("USER").isEmpty()) {
+			if (roleRepository.findByName(String.valueOf(RoleName.valueOf("USER"))).isEmpty()) {
 				roleRepository.save(
 						Role.builder().name("USER").build()
 				);

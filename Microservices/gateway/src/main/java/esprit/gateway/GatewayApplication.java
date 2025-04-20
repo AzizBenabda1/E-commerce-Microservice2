@@ -59,6 +59,11 @@ public class GatewayApplication {
 
                 .route("notification", r -> r.path("/notifications/**")
                         .uri("lb://notification-service"))
+
+
+                 .route("Microservice-User",
+                        r->r.path("/api/v1/**")
+                        .uri("lb://Microservice-User"))
                 .build();
     }
 

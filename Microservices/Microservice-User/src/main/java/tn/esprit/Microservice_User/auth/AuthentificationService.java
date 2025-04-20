@@ -1,9 +1,7 @@
 package tn.esprit.Microservice_User.auth;
 
-
 import jakarta.mail.MessagingException;
 import jakarta.transaction.Transactional;
-import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -12,6 +10,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import tn.esprit.Microservice_User.email.EmailService;
 import tn.esprit.Microservice_User.email.EmailTemplateName;
+import tn.esprit.Microservice_User.role.Role;
+import tn.esprit.Microservice_User.role.RoleName;
 import tn.esprit.Microservice_User.role.RoleRepository;
 import tn.esprit.Microservice_User.security.JwtService;
 import tn.esprit.Microservice_User.user.Token;
@@ -23,6 +23,7 @@ import java.security.SecureRandom;
 import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Set;
 
 @Service
 @RequiredArgsConstructor
@@ -32,16 +33,23 @@ public class AuthentificationService {
     private final PasswordEncoder passwordEncoder;
     private final UserRepository userRepository;
     private final TokenRepositroy tokenRepositroy;
-    private final EmailService emailService ;
-    private final JwtService jwtService ;
+    private final EmailService emailService;
+    private final JwtService jwtService;
     private final AuthenticationManager authenticationManager;
-@Value("${application.mailing.frontend.activation-url}")
+
+    @Value("${application.mailing.frontend.activation-url}")
     private String activationUrl;
 
-
+    /**
+     * Register a new user with a specific role.
+     * Default role is USER if no role is provided.
+     */
     public void register(RegistrationRequest request) throws MessagingException {
-        var userRole = roleRepository.findByName("USER")
-                .orElseThrow(()->new IllegalArgumentException("Role USER was not initialized"));
+        // Fetch the USER role from the database
+        Role userRole = roleRepository.findByName("USER")
+                .orElseThrow(() -> new IllegalArgumentException("Role USER was not initialized"));
+
+        // Create a new user with the USER role
         var user = User.builder()
                 .firstname(request.getFirstname())
                 .lastname(request.getLastname())
@@ -49,13 +57,19 @@ public class AuthentificationService {
                 .password(passwordEncoder.encode(request.getPassword()))
                 .accountLocked(false)
                 .enabled(false)
-                .roles(List.of(userRole))
+                .roles(Set.of(userRole)) // Assign the USER role by default
                 .build();
-        userRepository.save(user);
-        sendValidationEmail(user);
 
+        // Save the user
+        userRepository.save(user);
+
+        // Send account activation email
+        sendValidationEmail(user);
     }
 
+    /**
+     * Send an account activation email to the user.
+     */
     private void sendValidationEmail(User user) throws MessagingException {
         var newToken = generateAndSaveActivationToken(user);
         emailService.sendEmail(
@@ -65,12 +79,13 @@ public class AuthentificationService {
                 activationUrl,
                 newToken,
                 "Account Activation"
-
         );
     }
 
+    /**
+     * Generate and save an activation token for the user.
+     */
     private String generateAndSaveActivationToken(User user) {
-
         String generatedToken = generateActivationCode(6);
         var token = Token.builder()
                 .token(generatedToken)
@@ -82,6 +97,9 @@ public class AuthentificationService {
         return generatedToken;
     }
 
+    /**
+     * Generate a random activation code.
+     */
     private String generateActivationCode(int length) {
         String characters = "0123456789";
         StringBuilder codeBuilder = new StringBuilder();
@@ -90,43 +108,50 @@ public class AuthentificationService {
             int randomIndex = secureRandom.nextInt(characters.length());
             codeBuilder.append(characters.charAt(randomIndex));
         }
-
         return codeBuilder.toString();
-
     }
 
-    public AuthenticationResponse authenticate( AuthenticationRequest request) {
+    /**
+     * Authenticate a user and generate a JWT token.
+     */
+    public AuthenticationResponse authenticate(AuthenticationRequest request) {
         var auth = authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(
                         request.getEmail(),
                         request.getPassword()
                 )
         );
-        var claims = new HashMap<String,Object>();
-        var user = ((User)auth.getPrincipal());
+
+        var claims = new HashMap<String, Object>();
+        var user = ((User) auth.getPrincipal());
         claims.put("fullName", user.fullName());
+        claims.put("roles", user.getRoles().stream().map(Role::getName).toList()); // Add roles to claims
+
         var jwtToken = jwtService.generateToken(claims, user);
         return AuthenticationResponse.builder()
-                .token(jwtToken).build() ;
-
+                .token(jwtToken)
+                .build();
     }
 
-
-
-
-    //@Transactional
-
-    public void avtivateAccount(String token) throws MessagingException {
+    /**
+     * Activate a user's account using a token.
+     */
+    @Transactional
+    public void activateAccount(String token) throws MessagingException {
         Token savedToken = tokenRepositroy.findByToken(token)
-                .orElseThrow(()->new RuntimeException("Invalide token"));
-        if (LocalDateTime.now().isAfter(savedToken.getExpiresAt())){
+                .orElseThrow(() -> new RuntimeException("Invalid token"));
+
+        if (LocalDateTime.now().isAfter(savedToken.getExpiresAt())) {
             sendValidationEmail(savedToken.getUser());
-            throw new RuntimeException("Activation token has been expired . A new token has been sent");
+            throw new RuntimeException("Activation token has expired. A new token has been sent.");
         }
+
         var user = userRepository.findById(savedToken.getUser().getId())
-                .orElseThrow(()->new RuntimeException("User not found"));
+                .orElseThrow(() -> new RuntimeException("User not found"));
+
         user.setEnabled(true);
         userRepository.save(user);
+
         savedToken.setValidatedAt(LocalDateTime.now());
         tokenRepositroy.save(savedToken);
     }

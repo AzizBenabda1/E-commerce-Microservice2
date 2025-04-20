@@ -1,0 +1,168 @@
+
+services:
+  eureka:
+    build: ./microservices/eureka
+    image:  backend-eureka:latest
+    container_name: eureka-server
+    ports:
+      - "8761:8761"
+    networks:
+      - microservices-network
+
+  gateway:
+    build: ./microservices/gateway
+    image:  amenizoubeir/backend-gateway:latest
+    container_name: gateway-service
+    ports:
+      - "8065:8065"
+    depends_on:
+      - eureka
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka:8761/eureka/
+    networks:
+      - microservices-network
+
+  mysql:
+    container_name: mysql-bsn
+    image: mysql
+    environment:
+      MYSQL_USER: root
+      MYSQL_PASSWORD:
+      MYSQLDATA: /var/lib/mysql/data
+      MYSQL_DATABASE: usersdb
+    volumes:
+      - mysql:/var/lib/mysql
+    ports:
+      - 3306:3306
+    networks:
+      - microservices-network
+
+    restart: unless-stopped
+
+  mail-dev:
+    container_name: mail-dev-user008
+    image: maildev/maildev
+    ports:
+      - 1080:1080
+      - 1025:1025
+
+
+
+  user-service:
+    build: ./microservices/Microservice-User
+    image:  backend-user-service:latest
+    container_name: user-service
+    ports:
+      - "8045:8045"
+    depends_on:
+      - eureka
+      - gateway
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka:8761/eureka/
+    networks:
+      - microservices-network
+
+  fournisseur-service:
+    build: ./microservices/fournisseur
+    image: backend-fournisseur-service:latest
+    container_name: fournisseur-service
+    ports:
+      - "8097:8097"
+    depends_on:
+      - eureka
+      - gateway
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka:8761/eureka/
+    networks:
+      - microservices-network
+
+  logistics-service:
+    build: ./microservices/Logistics
+    image: backend-logistics-service:latest
+    container_name: logistics-service
+    ports:
+      - "8098:8098"
+    depends_on:
+      - eureka
+      - gateway
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka:8761/eureka/
+    networks:
+      - microservices-network
+
+  commande-service:
+    build: ./microservices/CommandeService
+    image: backend-commande-service:latest
+    container_name: commande-service
+    ports:
+      - "8093:8093"
+    depends_on:
+      - eureka
+      - gateway
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka:8761/eureka/
+    networks:
+      - microservices-network
+
+  Notification-Microservice:
+    build: ./microservices/Notification-Microservice
+    image: backend-reclamation-service:latest
+    container_name: Notification-Microservice
+    ports:
+      - "8092:8092"
+    depends_on:
+      - eureka
+      - gateway
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka:8761/eureka/
+    networks:
+      - microservices-network
+
+  product-service:
+    build: ./microservices/Produit
+    image: backend-product-service:latest
+    container_name: Produit-service
+    ports:
+      - "8096:8096"
+    depends_on:
+      - eureka
+      - gateway
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka:8761/eureka/
+    networks:
+      - microservices-network
+
+  reclamation-service:
+    build: ./microservices/reclamation
+    image: backend-reclamation-service:latest
+    container_name: reclamation-service
+    ports:
+      - "8095:8095"
+    depends_on:
+      - eureka
+      - gateway
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka:8761/eureka/
+    networks:
+      - microservices-network
+
+  Review-service:
+    build: ./microservices/Review
+    image: backend-reclamation-service:latest
+    container_name: Review-service
+    ports:
+      - "8094:8094"
+    depends_on:
+      - eureka
+      - gateway
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka:8761/eureka/
+    networks:
+      - microservices-network
+
+networks:
+  microservices-network:
+    driver: bridge
+
+volumes:
+  mysql:

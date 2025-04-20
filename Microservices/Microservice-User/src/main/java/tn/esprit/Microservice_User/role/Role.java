@@ -24,10 +24,10 @@ public class Role {
     @Id
     @GeneratedValue
     private Integer id;
-    @Column(unique = true)
-    private String name;
+    @Column(unique = true, nullable = false)
+    private String name; // Ensure this matches the values in the database (e.g., "USER", "ADMIN", "AGENT")
 
-    @ManyToMany(mappedBy = "roles")
+    @ManyToMany(mappedBy = "roles" , fetch = FetchType.LAZY)
     @JsonIgnore
     private List<User> users;
 
@@ -37,5 +37,7 @@ public class Role {
     @LastModifiedDate
     @Column(insertable = false )
     private LocalDateTime updatedAt ;
+
+
 
 }
