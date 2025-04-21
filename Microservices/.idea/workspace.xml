@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="09eca6a6-d5ca-47d7-a697-a66831efcec3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/CommandeService/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CommandeService/src/main/java/com/example/CommandeService/Service/PanierClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CommandeService/src/main/java/com/example/CommandeService/entite/PanierDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CommandeService/src/main/java/com/example/CommandeService/entite/ProduitDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Produit/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fournisseur/src/main/java/tn/esprit/fournisseur/FournisseurController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/frontendecommerce/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/frontendecommerce/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/frontendecommerce/.vscode/extensions.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/frontendecommerce/.vscode/launch.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/frontendecommerce/.vscode/tasks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/frontendecommerce/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/frontendecommerce/angular.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/frontendecommerce/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/frontendecommerce/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/frontendecommerce/src/app/app-routing.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/frontendecommerce/src/app/app.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/frontendecommerce/src/app/app.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/frontendecommerce/src/app/app.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/frontendecommerce/src/app/app.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/frontendecommerce/src/app/app.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/frontendecommerce/src/app/commande/commande-routing.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/frontendecommerce/src/app/commande/commande.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/frontendecommerce/src/app/commande/components/commande-create/commande-create.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/frontendecommerce/src/app/commande/components/commande-create/commande-create.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/frontendecommerce/src/app/commande/components/commande-create/commande-create.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/frontendecommerce/src/app/commande/components/commande-create/commande-create.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/frontendecommerce/src/app/commande/components/commande-detail/commande-detail.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/frontendecommerce/src/app/commande/components/commande-detail/commande-detail.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/frontendecommerce/src/app/commande/components/commande-detail/commande-detail.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/frontendecommerce/src/app/commande/components/commande-detail/commande-detail.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/frontendecommerce/src/app/commande/components/commande-list/commande-list.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/frontendecommerce/src/app/commande/components/commande-list/commande-list.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/frontendecommerce/src/app/commande/components/commande-list/commande-list.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/frontendecommerce/src/app/commande/components/commande-list/commande-list.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/frontendecommerce/src/app/commande/models/commande.model.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/frontendecommerce/src/app/commande/services/commande.service.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/frontendecommerce/src/app/commande/services/commande.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/frontendecommerce/src/app/facture/components/facture-create/facture-create.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/frontendecommerce/src/app/facture/components/facture-create/facture-create.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/frontendecommerce/src/app/facture/components/facture-create/facture-create.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/frontendecommerce/src/app/facture/components/facture-create/facture-create.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/frontendecommerce/src/app/facture/components/facture-detail/facture-detail.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/frontendecommerce/src/app/facture/components/facture-detail/facture-detail.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/frontendecommerce/src/app/facture/components/facture-detail/facture-detail.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/frontendecommerce/src/app/facture/components/facture-detail/facture-detail.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/frontendecommerce/src/app/facture/components/facture-list/facture-list.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/frontendecommerce/src/app/facture/components/facture-list/facture-list.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/frontendecommerce/src/app/facture/components/facture-list/facture-list.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/frontendecommerce/src/app/facture/components/facture-list/facture-list.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/frontendecommerce/src/app/facture/facture-routing.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/frontendecommerce/src/app/facture/facture.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/frontendecommerce/src/app/facture/models/facture.model.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/frontendecommerce/src/app/facture/services/facture.service.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/frontendecommerce/src/app/facture/services/facture.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/frontendecommerce/src/assets/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/frontendecommerce/src/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/frontendecommerce/src/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/frontendecommerce/src/main.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/frontendecommerce/src/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/frontendecommerce/tsconfig.app.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/frontendecommerce/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/frontendecommerce/tsconfig.spec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CommandeService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/CommandeService/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CommandeService/src/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CommandeService/src/main/java/com/example/CommandeService/Controller/CommandeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CommandeService/src/main/java/com/example/CommandeService/Controller/CommandeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CommandeService/src/main/java/com/example/CommandeService/Controller/FactureController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CommandeService/src/main/java/com/example/CommandeService/Controller/FactureController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CommandeService/src/main/java/com/example/CommandeService/Service/CommandeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/CommandeService/src/main/java/com/example/CommandeService/Service/CommandeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CommandeService/src/main/java/com/example/CommandeService/Service/FactureService.java" beforeDir="false" afterPath="$PROJECT_DIR$/CommandeService/src/main/java/com/example/CommandeService/Service/FactureService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CommandeService/src/main/java/com/example/CommandeService/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/CommandeService/src/main/java/com/example/CommandeService/config/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CommandeService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/CommandeService/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservice-User/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/Microservice-User/.gitattributes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservice-User/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Microservice-User/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservice-User/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Microservice-User/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservice-User/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/Microservice-User/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservice-User/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Microservice-User/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservice-User/src/main/java/tn/esprit/Microservice_User/MicroserviceUserApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Microservice-User/src/main/java/tn/esprit/Microservice_User/MicroserviceUserApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservice-User/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Microservice-User/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservice-User/src/test/java/tn/esprit/Microservice_User/MicroserviceUserApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/Microservice-User/src/test/java/tn/esprit/Microservice_User/MicroserviceUserApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Produit/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/Produit/.gitattributes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Produit/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Produit/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Produit/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Produit/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Produit/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/Produit/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Produit/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Produit/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Produit/src/main/java/tn/esprit/produit/Controller/PanierController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Produit/src/main/java/tn/esprit/produit/Controller/PanierController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Produit/src/main/java/tn/esprit/produit/Controller/ProduitController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Produit/src/main/java/tn/esprit/produit/Controller/ProduitController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Produit/src/main/java/tn/esprit/produit/Entity/Panier.java" beforeDir="false" afterPath="$PROJECT_DIR$/Produit/src/main/java/tn/esprit/produit/Entity/Panier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Produit/src/main/java/tn/esprit/produit/Entity/Produit.java" beforeDir="false" afterPath="$PROJECT_DIR$/Produit/src/main/java/tn/esprit/produit/Entity/Produit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Produit/src/main/java/tn/esprit/produit/ProduitApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Produit/src/main/java/tn/esprit/produit/ProduitApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Produit/src/main/java/tn/esprit/produit/Services/IPanierService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Produit/src/main/java/tn/esprit/produit/Services/IPanierService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Produit/src/main/java/tn/esprit/produit/Services/PanierServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Produit/src/main/java/tn/esprit/produit/Services/PanierServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Produit/src/main/java/tn/esprit/produit/Services/ProduitServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Produit/src/main/java/tn/esprit/produit/Services/ProduitServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Produit/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Produit/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Produit/src/test/java/tn/esprit/produit/ProduitApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/Produit/src/test/java/tn/esprit/produit/ProduitApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fournisseur/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/fournisseur/.gitattributes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fournisseur/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/fournisseur/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fournisseur/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/fournisseur/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fournisseur/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/fournisseur/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fournisseur/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fournisseur/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fournisseur/src/main/java/tn/esprit/fournisseur/FournisseurApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/fournisseur/src/main/java/tn/esprit/fournisseur/FournisseurApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fournisseur/src/main/java/tn/esprit/fournisseur/fournisseurcontrolleur.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fournisseur/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/fournisseur/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fournisseur/src/test/java/tn/esprit/fournisseur/FournisseurApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/fournisseur/src/test/java/tn/esprit/fournisseur/FournisseurApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/esprit/gateway/GatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/esprit/gateway/GatewayApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reclamation/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/reclamation/.gitattributes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reclamation/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/reclamation/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reclamation/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/reclamation/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reclamation/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/reclamation/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reclamation/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/reclamation/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reclamation/src/main/java/reclamation/Reclamation.java" beforeDir="false" afterPath="$PROJECT_DIR$/reclamation/src/main/java/reclamation/Reclamation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reclamation/src/main/java/reclamation/ReclamationApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/reclamation/src/main/java/reclamation/ReclamationApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reclamation/src/main/java/reclamation/ReclamationRestApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/reclamation/src/main/java/reclamation/ReclamationRestApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reclamation/src/main/java/reclamation/ReclamationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/reclamation/src/main/java/reclamation/ReclamationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reclamation/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/reclamation/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reclamation/src/test/java/reclamation/ReclamationApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/reclamation/src/test/java/reclamation/ReclamationApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../docker-compose.yml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;AzizBenabda1&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/AzizBenabda1/E-commerce-Microservice2.git&quot;,
+    &quot;accountId&quot;: &quot;45d993c0-2908-4057-ab5d-77068ba13861&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2vBpXQeSFlPNlq7efUg1I5mGnAZ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Aziz&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Mouha/OneDrive/Bureau/MicroserviceEcommerce&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="GatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="esprit.gateway.GatewayApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="09eca6a6-d5ca-47d7-a697-a66831efcec3" name="Changes" comment="" />
+      <created>1743628361527</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1743628361527</updated>
+      <workItem from="1743628363939" duration="1085000" />
+      <workItem from="1744101936564" duration="13000" />
+      <workItem from="1745240008316" duration="660000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
